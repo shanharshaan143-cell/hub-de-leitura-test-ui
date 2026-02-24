@@ -34,7 +34,7 @@ describe('Funcionalidade: Cadastro no hub de leitura', () => {
         
         })
 
-        it.only('Deve preencher cadastro com sucesso-usando comando customizado', () => {
+        it('Deve preencher cadastro com sucesso-usando comando customizado', () => {
         let nome = faker.person.fullName()
         let email = faker.internet.email()
         cy.preencherCadastro(nome,email,'67992222222','Test@123','Test@123')

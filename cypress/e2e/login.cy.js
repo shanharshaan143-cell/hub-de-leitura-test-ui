@@ -1,4 +1,5 @@
 ///<reference types="cypress"/>
+import user from "../fixtures/usuario.json"
 
 describe('Funcionalidade login', () => {
     beforeEach(() => {
@@ -13,12 +14,17 @@ describe('Funcionalidade login', () => {
     });
 
     it('Deve fazer login com sucesso-usando comando customizado', () => {
-        cy.login()
+        cy.login('usuario@teste.com', 'user123')
         
     });
 
-    it.only('Deve fazer login com sucesso com conta admin-usando comando cutomizado', () => {
+    it('Deve fazer login com sucesso com conta admin-usando comando cutomizado', () => {
         cy.login('admin@biblioteca.com','admin123')
+        
+    });
+
+    it('Deve fazer login com sucesso- Usando importação da massa de dados ', () => {
+         cy.login(user.email,user.senha)
         
     });
     

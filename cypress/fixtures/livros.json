@@ -1,0 +1,21 @@
+[
+    {
+        "livro":"1984",
+        "categoria": "ficção" 
+    },
+
+    {
+        "livro":"Dom Casmurro",
+        "categoria":"ficção clássica"
+    
+    },
+
+    {
+        "livro":"O Alquimista",
+        "categoria":"ficção"
+
+    }
+
+
+
+]
