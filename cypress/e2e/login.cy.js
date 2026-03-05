@@ -6,6 +6,14 @@ describe('Funcionalidade login', () => {
         cy.visit('login.html')
     });
 
+    it('Deve fazer login com dados validos', () => {
+        cy.get('#email').type('test143@test.com')
+        cy.get('#password').type('Test@123')
+        cy.get('#login-btn').click()
+        cy.url().should('include','dashboard')
+        
+    });
+
     it('Deve fazer login com sucesso', () => {
         cy.get('#email').type('usuario@teste.com')
         cy.get('#password').type('user123')
