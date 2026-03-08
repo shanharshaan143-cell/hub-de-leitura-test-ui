@@ -9,22 +9,6 @@ describe('Funcionalidade: Cadastro no hub de leitura', () => {
     afterEach(() => {
         cy.screenshot()
     });
-
-    it.only('Deve fazer cadastro com sucesso com dados validos', () => {
-        let email=`teste${Date.now()}@teste.com`
-        cy.get('#name').type('shanhar')
-        cy.get('#name').type(email)
-        cy.get('#phone').type('67123456789')
-        cy.get('#password').type('Test@123')
-        cy.get('#confirm-password').type('Test@123')
-        cy.get('#terms-agreement').check()
-        cy.get('#register-btn').click()
-        cy.url().should('include','dashboard')
-        
-
-        
-        
-    });
     
     it('Deve fazer cadastro com sucesso usando função Js',()=>{
         let email=`teste${Date.now()}@teste.com`
