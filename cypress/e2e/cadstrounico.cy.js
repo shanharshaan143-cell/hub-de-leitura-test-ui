@@ -5,8 +5,9 @@ describe('Funcionalidade: cadstro no hub de leitura  ', () => {
     });
 
     it('Deve fazer cadastro com sucesso usando dados validos', () => {
+        let email=`teste${Date.now()}@teste.com`
         cy.get('#name').type('Shanhar shaan')
-        cy.get('#email').type('test101@test.com')
+        cy.get('#email').type(email)
         cy.get('#phone').type('67991111111')
         cy.get('#password').type('Test@123')
         cy.get('#confirm-password').type('Test@123')
